@@ -29,8 +29,7 @@ namespace CricketTeam_Managment_System.DbAccess
             return await connection.QueryAsync<CricketTeam>("[dbo].[GetById]",
                 parameters, commandType: CommandType.StoredProcedure);
         }
-
-
+        
         public async Task<int> InserterCricketerDetails(CricketTeam cricketTeam)
         {
             await using var connection = _dbConnectionFactory.Create();
@@ -45,9 +44,7 @@ namespace CricketTeam_Managment_System.DbAccess
                 },
                 commandType: CommandType.StoredProcedure);
         }
-
-
-
+        
         public async Task<int> UpdateCricketerDetails(CricketTeam cricketTeam)
         {
             await using var connection = _dbConnectionFactory.Create();
