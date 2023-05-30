@@ -1,8 +1,8 @@
 ﻿Create Procedure [dbo].[InsertToCricketTeam]
 @JerseyNumber int,
-@JerseyName varchar,
+@JerseyName varchar(20),
 @PlayerAge int,
-@Average decimal
+@Average float
 
 as
 begin

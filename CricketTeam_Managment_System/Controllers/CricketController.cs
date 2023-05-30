@@ -19,7 +19,6 @@ namespace Non_database_Project.Controllers
 
         [HttpGet]
         [Route("Display")]
-
         public async Task<IActionResult> GetAll()
         {
            var display = await _cricketerService.GetAll();
@@ -61,20 +60,18 @@ namespace Non_database_Project.Controllers
         }
 
         [HttpDelete]
+        [Route("Delete")]
         public async Task<IActionResult> Remove(int id)
         {
-
             var remove = await _cricketerService.Delete(id);
-
             return Ok(remove);
         }
 
         [HttpPut]
+        [Route("Update")]
         public async Task<IActionResult> Update(CricketTeam cricketTeam)
         {
-
             var cricketteam = await _cricketerService.Update(cricketTeam);
-
             return Ok(cricketteam);
         }
     }

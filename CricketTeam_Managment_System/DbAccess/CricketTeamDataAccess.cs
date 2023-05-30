@@ -23,7 +23,6 @@ namespace CricketTeam_Managment_System.DbAccess
 
         public async Task<IEnumerable<CricketTeam>> GetCricketTeamsById(int id)
         {
-            
             await using var connection = _dbConnectionFactory.Create();
             var parameters = new DynamicParameters();
             parameters.Add("@Id", id);
